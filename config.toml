@@ -1,9 +1,9 @@
-baseurl = "https://manueltoral.com"
+baseurl = "/"
 title = "Manuel Toral"
 languageCode = "es"
 timeZone = "America/Mexico_City"
 
-canonifyurls = true # Enable to turn relative URLs into absolute.
+relativeURLs = true
 
 pygmentsstyle = "monokai"
 pygmentscodefences = true

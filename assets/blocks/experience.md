@@ -8,8 +8,6 @@ _Enero 2026 – Presente_ ~ **Gerente Fundador de R&D · AI/ML | Analytics & AI*
 *   Construyo el modelo del Centro de Excelencia (CoE) para el desarrollo de capacidades internas, cubriendo sesiones de entrenamiento, estándares de taxonomía de IA y diseño de arquitecturas agenticas.
 *   Colaboro transversalmente con equipos de MLOps, Gobierno y Analítica para escalar la IA como una capacidad institucional en toda la organización.
 
-#### Coca-Cola FEMSA
-
 _Agosto 2025 – Enero 2026_ ~ **Gerente de Operaciones y Entrega, AI/ML Ops**
 
 Lidero y empodero a un equipo multidisciplinario de 2 especialistas y 12 científicos de datos, fomentando la colaboración, innovación y alto rendimiento dentro de la función de AI/ML Ops. Superviso la operación confiable de productos analíticos, incluyendo modelos predictivos y soluciones de datos avanzadas. Diseño e implemento protocolos de entrega, SLAs y marcos de calidad para asegurar despliegues consistentes y escalables. Alineo la entrega de productos de IA/ML con las necesidades del negocio, posicionando a la analítica avanzada como un habilitador estratégico de innovación y crecimiento.
