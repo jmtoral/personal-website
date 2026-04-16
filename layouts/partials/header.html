@@ -1,9 +1,18 @@
 <style>
+  /* ── Typography Overrides ── */
+  body, p, li, a, span, button, input, blockquote, code {
+    font-family: 'DM Sans', sans-serif !important;
+  }
+  h1, h2, h3, h4, h5, h6, .title, .topnav-title, .home-section-title, .home-post-title {
+    font-family: 'Libre Franklin', sans-serif !important;
+  }
+
   /* ── Dark mode toggle & language toggle ── */
   .topnav-controls {
     display: flex;
     align-items: center;
-    gap: 1rem;
+    gap: 0.8rem;
+    margin-left: auto;
   }
   .nav-btn {
     background: none;
@@ -20,42 +29,66 @@
   }
   .nav-btn:hover { opacity: 1; }
 
+  /* ── Reduce TopNav Font Size ── */
+  .topnav-link { font-size: 0.85em; }
+
+  /* ── Override nav to push menu to center + controls to the right ── */
+  .topnav-inner {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    gap: 1.5rem;
+    position: relative;
+  }
+  @media screen and (min-width: 769px) {
+    .topnav-inner .topnav-list {
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+  .topnav-inner .topnav-list {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 1.5rem;
+    align-items: center;
+  }
+
   /* ── Dark mode vars ── */
   body.dark-mode {
-    --bg: #1a1c20;
-    --surface: #23262d;
-    --border: #35383f;
-    --text: #d4d8e2;
-    --heading: #eef0f5;
-    --link: #6fbf73;
-    --link-active: #4caf50;
-    --muted: #7a8090;
-    background-color: var(--bg) !important;
-    color: var(--text) !important;
+    background-color: #1a1c20 !important;
+    color: #d4d8e2 !important;
   }
-  body.dark-mode a { color: var(--link) !important; }
-  body.dark-mode a:hover { color: var(--link-active) !important; }
+  body.dark-mode a { color: #6fbf73 !important; }
+  body.dark-mode a:hover { color: #4caf50 !important; }
   body.dark-mode h1, body.dark-mode h2, body.dark-mode h3,
   body.dark-mode h4, body.dark-mode h5, body.dark-mode h6 {
-    color: var(--heading) !important;
+    color: #eef0f5 !important;
   }
   body.dark-mode .topnav {
-    background-color: var(--surface) !important;
-    border-color: var(--border) !important;
+    background-color: #23262d !important;
+    border-color: #35383f !important;
   }
   body.dark-mode .topnav-title,
   body.dark-mode .topnav-link,
-  body.dark-mode .mobilemenu { color: var(--heading) !important; }
-  body.dark-mode .home-tagline { color: var(--muted) !important; }
-  body.dark-mode .home-pronouns { color: var(--muted) !important; }
-  body.dark-mode .home-section { border-color: var(--border) !important; }
-  body.dark-mode .home-post-item { border-color: var(--border) !important; }
-  body.dark-mode .home-section-label { color: var(--muted) !important; }
-  body.dark-mode .home-post-date { color: var(--muted) !important; }
+  body.dark-mode .mobilemenu { color: #eef0f5 !important; }
+  body.dark-mode .home-tagline { color: #7a8090 !important; }
+  body.dark-mode .home-pronouns { color: #7a8090 !important; }
+  body.dark-mode .home-section { border-color: #35383f !important; }
+  body.dark-mode .home-post-item { border-color: #35383f !important; }
+  body.dark-mode .home-section-label { color: #7a8090 !important; }
+  body.dark-mode .home-post-date { color: #7a8090 !important; }
+  body.dark-mode .home-post-title { color: #d4d8e2 !important; }
   body.dark-mode code { background-color: #2e3238 !important; color: #a8d8ea !important; }
-  body.dark-mode .topnav-list.navopen { background-color: var(--surface) !important; border-color: var(--border) !important; }
+  body.dark-mode .topnav-list.navopen {
+    background-color: #23262d !important;
+    border-color: #35383f !important;
+  }
+  body.dark-mode .footer { color: #7a8090 !important; }
+  body.dark-mode .wrapper { background-color: #1a1c20 !important; }
 
-  /* Google Translate widget hides the toolbar */
+  /* Google Translate widget — hide toolbar */
   .goog-te-banner-frame { display: none !important; }
   body { top: 0 !important; }
   .skiptranslate { display: none !important; }
@@ -73,12 +106,6 @@
   }
 
   // ── Dark mode ──
-  (function() {
-    if (localStorage.getItem("darkMode") === "1") {
-      document.documentElement.classList.add("dark-mode-pending");
-    }
-  })();
-
   function toggleDarkMode() {
     const body = document.body;
     body.classList.toggle("dark-mode");
@@ -86,11 +113,11 @@
     if (body.classList.contains("dark-mode")) {
       localStorage.setItem("darkMode", "1");
       btn.textContent = "☀️";
-      btn.setAttribute("title", "Switch to light mode");
+      btn.setAttribute("title", "Modo claro");
     } else {
       localStorage.setItem("darkMode", "0");
       btn.textContent = "🌙";
-      btn.setAttribute("title", "Switch to dark mode");
+      btn.setAttribute("title", "Modo oscuro");
     }
   }
 
@@ -105,7 +132,7 @@
   // ── Language toggle (ES ↔ EN via Google Translate) ──
   function googleTranslateElementInit() {
     new google.translate.TranslateElement({
-      pageLanguage: 'en',
+      pageLanguage: 'es',
       includedLanguages: 'es,en',
       autoDisplay: false
     }, 'google_translate_element');
@@ -115,7 +142,6 @@
     const btn = document.getElementById("lang-btn");
     const selectEl = document.querySelector(".goog-te-combo");
     if (!selectEl) {
-      // Widget not loaded yet — load script first
       const s = document.createElement("script");
       s.src = "//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit";
       document.head.appendChild(s);
@@ -129,41 +155,41 @@
   }
 
   function applyTranslation(selectEl, btn) {
-    if (selectEl.value === "es") {
-      selectEl.value = "en";
-      btn.textContent = "ES";
-      btn.setAttribute("title", "Translate to Spanish");
-    } else {
+    if (selectEl.value === "en") {
       selectEl.value = "es";
       btn.textContent = "EN";
       btn.setAttribute("title", "Translate to English");
+    } else {
+      selectEl.value = "en";
+      btn.textContent = "ES";
+      btn.setAttribute("title", "Traducir al español");
     }
     selectEl.dispatchEvent(new Event("change"));
   }
 </script>
 
-<!-- Hidden Google Translate container -->
 <div id="google_translate_element"></div>
 
 <section class="container">
   <nav class="topnav">
-    <a class="topnav-title" href="{{ .Site.BaseURL }}">
-      {{ .Site.Title }}
-    </a>
-    {{ with .Site.Menus.main }}
-      <a href="javascript:void(0);" class="mobilemenu" onclick="toggleMenu()">Menu</a>
-      <ul id="topnav-items" class="topnav-list">
-        {{ range sort . }}
-          <li class="topnav-item">
-            <a class="topnav-link" href="{{ .URL }}">{{ .Name }}</a>
-          </li>
-        {{ end }}
-      </ul>
-    {{ end }}
+    <div class="topnav-inner">
+      <a class="topnav-title" href="{{ .Site.BaseURL }}">{{ .Site.Title }}</a>
 
-    <div class="topnav-controls">
-      <button id="lang-btn" class="nav-btn" onclick="toggleLanguage()" title="Translate to Spanish">ES</button>
-      <button id="dark-mode-btn" class="nav-btn" onclick="toggleDarkMode()" title="Switch to dark mode">🌙</button>
+      {{ with .Site.Menus.main }}
+        <a href="javascript:void(0);" class="mobilemenu" onclick="toggleMenu()">Menu</a>
+        <ul id="topnav-items" class="topnav-list">
+          {{ range sort . }}
+            <li class="topnav-item">
+              <a class="topnav-link" href="{{ .URL }}">{{ .Name }}</a>
+            </li>
+          {{ end }}
+        </ul>
+      {{ end }}
+
+      <div class="topnav-controls">
+        <button id="lang-btn" class="nav-btn" onclick="toggleLanguage()" title="Translate to English">EN</button>
+        <button id="dark-mode-btn" class="nav-btn" onclick="toggleDarkMode()" title="Modo oscuro">🌙</button>
+      </div>
     </div>
   </nav>
 </section>

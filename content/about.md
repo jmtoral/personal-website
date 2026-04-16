@@ -1,31 +1,30 @@
 +++
-title = "About Me"
+title = "Acerca de mí"
 slug = "about"
 +++
 
-I'm Manuel Toral (He/Him) — a data scientist, AI/ML practitioner, and public policy researcher based in Mexico City.
+Soy Manuel Toral (Él/Him) — un profesional en Ciencia de Datos y Analítica Social radicado en la Ciudad de México. 
 
-My work lives at the intersection of **rigorous analysis and real decisions**: building AI/ML institutional capabilities, leading multidisciplinary data teams, and turning complex, unstructured data into intelligence that moves organizations forward.
+Mi trabajo se encuentra en la intersección del análisis riguroso y las decisiones estratégicas: construyendo capacidades institucionales de IA/ML, liderando equipos multidisciplinarios de datos, y convirtiendo datos complejos y no estructurados en inteligencia que impulsa a las organizaciones hacia adelante.
 
-I am currently **Founding R&D Manager for AI/ML at Coca-Cola FEMSA**, where I created KOF's first dedicated R&D function from scratch. I also teach **Data Visualization** at Tecnológico de Monterrey, and support strategic decisions at the **Global Fund for Women** through network analysis and text mining across Latin America.
+Actualmente soy **Gerente Fundador de R&D en IA/ML en Coca-Cola FEMSA**, donde lidero y empodero a un equipo de científicos y especialistas de datos, diseñando e implementando la primera función dedicada a IA/ML en la organización. Adicionalmente, soy consultor líder en NLP para **Global Fund for Women**, donde analizo datos de redes sociales en América Latina, y profesor de Ciencia de Datos e Innovación Pública en el **Tecnológico de Monterrey**.
 
-Before becoming a data scientist, I was a policy analyst, public administrator, and researcher — which is why I care deeply about *why* the analysis matters, not just *how* it is built.
-
----
-
-#### Education
-
-**Tecnológico de Monterrey** — M.S. Applied Artificial Intelligence _(2024–2026)_
-
-**University of Chicago, Harris School of Public Policy** — M.A. Public Policy _(2015–2017)_
-President, Mexicans at UChicago · Co-founder, Students for Criminal Justice Reform
-
-**CIDE (Centro de Investigación y Docencia Económicas)** — B.A. Political Science and International Relations _(2008–2012)_
-
-**CIDE** — Certification in Drug Policy, Health and Human Rights _(2021)_
+Antes de ser científico de datos, fui analista de políticas públicas y administrador público — por lo que me importa profundamente el *por qué* del análisis, no solo el *cómo* se construye.
 
 ---
 
-#### Contact
+#### Educación
 
-The best way to reach me is through [LinkedIn](https://www.linkedin.com/in/josetoral/) or [email](/contact).
+**Tecnológico de Monterrey** — Maestría en Inteligencia Artificial Aplicada *(2024–2026)*
+
+**University of Chicago, Harris School of Public Policy** — Maestría en Política Pública *(2015–2017)*
+
+**CIDE (Centro de Investigación y Docencia Económicas)** — Certificación en Política de Drogas, Salud y Derechos Humanos *(2021)*
+
+**CIDE** — Licenciatura en Ciencia Política y Relaciones Internacionales *(2008–2012)*
+
+---
+
+#### Contacto
+
+La mejor forma de contactarme es a través de [LinkedIn](https://www.linkedin.com/in/josetoral/) o por [correo electrónico](/contact).

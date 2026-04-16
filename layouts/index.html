@@ -27,21 +27,21 @@
     }
 
     .home h1 {
-      font-size: 3.2rem;
+      font-size: 4.2rem;
       font-weight: 700;
       color: #0F0F0D;
       margin-bottom: 0.6rem;
       letter-spacing: -0.015em;
     }
     .home-tagline {
-      font-size: 1.6rem;
+      font-size: 2.1rem;
       color: #787570;
       margin-top: 0;
       margin-bottom: 0.5rem;
       letter-spacing: 0.04em;
     }
     .home-pronouns {
-      font-size: 1.1rem;
+      font-size: 1.3rem;
       color: #B0ADA5;
       margin-top: 0;
       margin-bottom: 3.4rem;
@@ -67,7 +67,7 @@
     .home li a {
       margin: 0;
       font-weight: 600;
-      font-size: 1.5rem;
+      font-size: 1.8rem;
     }
 
     /* ── Section separators on home ── */
@@ -85,7 +85,7 @@
       margin-bottom: 2rem;
     }
     .home-section-title {
-      font-size: 1.6rem;
+      font-size: 1.9rem;
       font-weight: 700;
       color: #0F0F0D;
       margin-bottom: 0.6rem;
@@ -115,7 +115,7 @@
       border-bottom: none;
     }
     .home-post-title {
-      font-size: 1.6rem;
+      font-size: 1.8rem;
       font-weight: 600;
       color: #1A1A17;
       flex: 1;
@@ -125,7 +125,7 @@
       color: #2D5A2D;
     }
     .home-post-date {
-      font-size: 1.2rem;
+      font-size: 1.4rem;
       color: #B0ADA5;
       white-space: nowrap;
       flex-shrink: 0;
@@ -133,7 +133,7 @@
     .home-see-all {
       display: inline-block;
       margin-top: 2rem;
-      font-size: 1.3rem;
+      font-size: 1.5rem;
       font-weight: 600;
       color: #2D5A2D;
       text-decoration: none;
@@ -167,11 +167,18 @@
       </div>
       <h1>{{ .Site.Params.author }}</h1>
       <p class="home-tagline">{{ .Site.Params.info }}</p>
-      <p class="home-pronouns">He / Him</p>
+      <p class="home-pronouns">Él / Him</p>
       {{ with .Site.Params.social }}
         <ul>
           {{ range sort . }}
-            <li><a href="{{ .url }}" target="_blank">{{ .name }}</a></li>
+            <li><a href="{{ .url }}" target="_blank">
+              {{ if eq .name "GitHub" }}
+                <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" style="width: 18px; margin-right: 5px; vertical-align: sub;" alt="GitHub" />
+              {{ else if eq .name "LinkedIn" }}
+                <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" style="width: 18px; margin-right: 5px; vertical-align: sub;" alt="LinkedIn" />
+              {{ end }}
+              {{ .name }}
+            </a></li>
           {{ end }}
         </ul>
       {{ end }}
@@ -181,16 +188,17 @@
     {{ $posts := where site.RegularPages "Type" "blog" }}
     {{ if $posts }}
       <div class="home-section">
-        <span class="home-section-label">Recent Writing</span>
+        {{ $months := dict "Jan" "Ene" "Feb" "Feb" "Mar" "Mar" "Apr" "Abr" "May" "May" "Jun" "Jun" "Jul" "Jul" "Aug" "Ago" "Sep" "Sep" "Oct" "Oct" "Nov" "Nov" "Dec" "Dic" }}
+        <span class="home-section-label">Escritos recientes</span>
         <ul class="home-posts-list">
           {{ range first 5 ($posts.ByDate.Reverse) }}
             <li class="home-post-item">
               <a class="home-post-title" href="{{ .Permalink }}">{{ .Title }}</a>
-              <span class="home-post-date">{{ .Date.Format "Jan 2006" }}</span>
+              <span class="home-post-date">{{ index $months (.Date.Format "Jan") }} {{ .Date.Format "2006" }}</span>
             </li>
           {{ end }}
         </ul>
-        <a class="home-see-all" href="/blog/">All posts</a>
+        <a class="home-see-all" href="/blog/">Todos los posts</a>
       </div>
     {{ end }}
   </section>

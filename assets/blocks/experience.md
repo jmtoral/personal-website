@@ -1,95 +1,69 @@
 #### Coca-Cola FEMSA
 
-_Jan 2026 – present_ ~ **Founding R&D Manager · AI/ML | Analytics & Artificial Intelligence**
+_Enero 2026 – Presente_ ~ **Gerente Fundador de R&D · AI/ML | Analytics & AI**
 
-Founded and structured KOF's first dedicated R&D function for AI/ML, defining its charter, operating model, and innovation roadmap from scratch. Designing methodological standards across the full AI lifecycle: PoC discovery frameworks, model documentation protocols (Model Cards, SIPOC), and technical closure criteria. Implementing AI governance practices including model registry (MLflow), standardized handoff protocols, and documentation frameworks bridging R&D and MLOps. Building a Center of Excellence (CoE) model for internal capability development: training sessions, AI taxonomy standards, and agentic architecture design.
+*   Fundé y estructuré la primera función de R&D dedicada a IA/ML en KOF, definiendo su misión, modelo operativo y hoja de ruta de innovación desde cero.
+*   Diseño estándares metodológicos a través del ciclo de vida completo de la IA: marcos de descubrimiento de PoCs, protocolos de documentación de modelos (Model Cards, SIPOC) y criterios de cierre técnico.
+*   Implemento prácticas de gobierno de IA incluyendo registro de modelos (MLflow), protocolos estadarizados de entrega (handoff) y marcos de documentación que conectan R&D con MLOps.
+*   Construyo el modelo del Centro de Excelencia (CoE) para el desarrollo de capacidades internas, cubriendo sesiones de entrenamiento, estándares de taxonomía de IA y diseño de arquitecturas agenticas.
+*   Colaboro transversalmente con equipos de MLOps, Gobierno y Analítica para escalar la IA como una capacidad institucional en toda la organización.
 
-_Aug 2025 – Jan 2026_ ~ **Operations & Delivery Manager · AI/ML Ops**
+#### Coca-Cola FEMSA
 
-Led and empowered a multidisciplinary team of 2 specialists and 12 data scientists. Oversaw the reliable operation of analytical products, including predictive models and advanced data solutions. Designed and implemented delivery protocols, SLAs, and quality frameworks. Led the transition toward a dedicated R&D function by establishing the methodological foundations (MLflow governance, PoC lifecycle standards, model handoff protocols).
+_Agosto 2025 – Enero 2026_ ~ **Gerente de Operaciones y Entrega, AI/ML Ops**
 
-#### Global Fund for Women
-
-_Jul 2023 – Apr 2026_ ~ **Data Scientist** _(Contract · Remote)_
-
-Drove strategic funding and regional decision-making through the analysis of large-scale media, social network, and political conflict data across 6 Latin American countries. Delivered a critical analysis of social mobilization in Guatemala that directly led to GFW funding organizations involved in the nation's democratic transition. Applied network analysis and text mining to turn complex, unstructured data into clear, actionable intelligence. Currently architecting a data-driven country prioritization index using network and text analysis methods.
+Lidero y empodero a un equipo multidisciplinario de 2 especialistas y 12 científicos de datos, fomentando la colaboración, innovación y alto rendimiento dentro de la función de AI/ML Ops. Superviso la operación confiable de productos analíticos, incluyendo modelos predictivos y soluciones de datos avanzadas. Diseño e implemento protocolos de entrega, SLAs y marcos de calidad para asegurar despliegues consistentes y escalables. Alineo la entrega de productos de IA/ML con las necesidades del negocio, posicionando a la analítica avanzada como un habilitador estratégico de innovación y crecimiento.
 
 #### RappiCard México
 
-_Aug 2023 – Aug 2025_ ~ **Portfolio Lead Data Scientist** _(Remote)_
+_Octubre 2022 – Agosto 2025_ ~ **Líder de Ciencia de Datos (Data Science Lead)**
 
-Developed AI-powered solutions including a zero-shot classifier for automatic classification of NPS comments, Queryfier for query generation, and Explainer for translating SHAP indicators into user-friendly insights. Designed and deployed the first predictive models for transaction fraud and chargebacks, achieving over 70% accuracy. Acted as Data Translator: analyzed large datasets and collaborated with cross-functional teams to turn insights into action. Applied block-level geographic data to projects ranging from KYC processes to cost optimization in collection logistics.
+Desarrollé soluciones clave de IA: clasificador de NPS zero-shot, Queryfier para consultas dinámicas y Explainer para traducir valores SHAP en insights de negocio accionables. Creé modelos predictivos para detección de fraude y prevención de contracargos con más del 70% de precisión; especializado en modelos de cobranza preventiva, segmentación de clientes, predicción de abandono (churn) y optimización de CX. Lideré la migración del equipo de computación local a la arquitectura AWS SageMaker, colaborando con MLOps para implementar flujos de trabajo en la nube.
 
-_Oct 2022 – Aug 2023_ ~ **CX Lead Data Scientist**
+#### Global Fund for Women
 
-#### Tecnológico de Monterrey
+_Septiembre 2023 – Diciembre 2025_ ~ **Consultor Líder en NLP** *(Remoto)*
 
-_Aug 2022 – present_ ~ **Lecturer** _(Part-time)_
+Construí un pipeline de NLP utilizando modelado de temas BERT para analizar texto no estructurado de redes sociales, sirviendo como motor central del "Índice de Movimientos Sociales" en 5 países de América Latina. Transformé datos sociales complejos en activos visuales estratégicos que apoyaron directamente solicitudes exitosas de subvenciones para proyectos en Guatemala.
 
-Currently teaching the **Data Visualization Workshop** for the International Relations Program. Previously taught the text mining module of "Data Science II" for the Public Transformation Program.
+#### ITESM + IEPC Jalisco
+
+_Marzo 2024 – Julio 2024_ ~ **Líder de Arquitectura de Solución**
+
+Desarrollé un sistema escalable de ASR (Reconocimiento Automático de Voz) basado en IA para transcribir y analizar más de 3,000 horas diarias de transmisiones de radio/TV durante el proceso electoral 2024. Entregué informes de auditoría automatizados sobre equidad de género y lenguaje inclusivo.
 
 #### IDntify
 
-_Feb 2022 – Oct 2022_ ~ **Co-founder & Lead Data Scientist**
+_Febrero 2022 – Octubre 2022_ ~ **Co-Fundador y Líder de Ciencia de Datos**
 
-Led the creation of models for the prediction of fraud in e-commerce transactions.
+Lideré el desarrollo y evaluación de modelos predictivos para detectar fraude en transacciones de comercio electrónico.
 
-#### Consejo de la Judicatura Federal
+#### Consejo de la Judicatura Federal (CJF)
 
-_May 2019 – Feb 2022_ ~ **Technical Secretary of Strategic Projects — Directorate General for Judicial Statistics**
+_Mayo 2019 – Febrero 2022_ ~ **Secretario Técnico de Proyectos Estratégicos**
 
-Headed the Technical Secretariat of Strategic Projects at the Mexican Council of the Federal Judiciary. Managed the legal and strategic planning team. Responsible for data mining and statistics generation for external public entities, primarily the National Institute of Statistics and Geography (INEGI). Planned, designed, and implemented the Council's contribution to INEGI's National Census of Federal Justice Administration.
+Lideré un equipo de 10 personas en el diseño y ejecución del Censo Nacional de Impartición de Justicia del INEGI durante 3 años. Demostré dominio avanzado de SAS procesando extensos conjuntos de datos jurisdiccionales e integrando el Sistema Integrado de Administración de Recursos Humanos (SIARH).
 
-#### Professional Instructor in R
+#### Tecnológico de Monterrey y Capacitación Especializada
 
-_Oct 2017 – Aug 2025_ ~ **Freelance / Self-employed**
+_Julio 2020 – Presente_ ~ **Profesor Adjunto e Instructor Técnico**
 
-Listed in the [RStudio Training & Consulting Directory](https://www.rstudio.com/trainers/). Eight years of instruction in R for analysts, researchers, and data scientists across academia, government, and the private sector.
-
-#### CENTRO diseño | cine | televisión
-
-_Aug 2022 – Oct 2023_ ~ **Lecturer** _(Contract)_
-
-Lecturer for the STEAM common core at college level.
+Profesor de "Ciencia de Datos para la Toma de Decisiones Públicas". Facilité el curso de "Innovación Pública" para el Municipio de León (2025). Diseñé e impartí bootcamps intensivos de R, Python y Visualización de Datos para más de 500 profesionales en instituciones como el IMCO y MUCD.
 
 #### Mexicanos Contra la Corrupción y la Impunidad
 
-_Mar 2018 – May 2019_ ~ **Research Associate and Data Specialist**
+_Marzo 2018 – Mayo 2019_ ~ **Líder y fundador de la estrategia digital**
 
-Designed and coordinated "Diorama" (with Antena Labs), a research tool linking official and open datasets through an entity-recognition algorithm. Designed and implemented the Digital Anticorruption Strategy inside MCCI. Participated in the first debate-verification meeting organized by Animal Político.
+Diseñé y coordiné la implementación de la estrategia digital anticorrupción, apalancando la tecnología y el análisis de datos como piedra angular de los procesos de investigación.
 
-#### Fundación IDEA
+#### Fundación IDEA / C-230 Consultores
 
-_Jul 2017 – Dec 2017_ ~ **Senior Project Coordinator**
+_Julio 2017 – Febrero 2018_ ~ **Gerente de Proyectos Senior**
 
-Coordinated a 6-person team to build a Model of Community Policing in Mexico.
-
-#### Harris School of Public Policy, University of Chicago
-
-_Dec 2016 – Jul 2017_ ~ **Stata & R Resident Expert**
+Lideré un equipo de seis personas en el diseño e implementación de un Modelo de Instituciones de Policía Comunitaria en Nuevo León y Michoacán.
 
 #### Gobierno del Estado de Jalisco
 
-_Feb 2013 – Aug 2015_ ~ **Policy Analyst to the Private Secretariat**
+_Febrero 2013 – Junio 2015_ ~ **Asesor y Analista**
 
-Coordinated an eight-member team under the Deputy Private Secretary to the Governor of Jalisco (Aristóteles Sandoval), producing strategic analysis instruments and political counselling for executive evidence-based decision-making. Produced initiatives that led to the implementation of the Amber Alert in Jalisco, the New System of Criminal Justice (adversarial and oral), and executive austerity measures. Formulated the "Building a Strategic Political Agenda" project to rationalize the Governor's public policy agenda.
-
-## Education
-
-#### Tecnológico de Monterrey
-
-_Apr 2024 – Jul 2026_ ~ **Master of Science — Applied Artificial Intelligence**
-
-#### Harris School of Public Policy, University of Chicago
-
-_2015 – 2017_ ~ **Master's Degree — Public Policy**
-
-President of Mexicans at UChicago · Co-founder of Students for Criminal Justice Reform · Member of Innovators in Social Policy.
-
-#### CIDE — Centro de Investigación y Docencia Económicas
-
-_2021_ ~ **Certification — Drug Policy, Health and Human Rights**
-
-_2008 – 2012_ ~ **Bachelor's Degree — Political Science and International Relations**
-
-Thesis: _El efecto de la competencia política en el establecimiento de OJAs locales_
+Coordiné un equipo productor de instrumentos de análisis estratégico y asesoría política para el Ejecutivo Estatal, apoyando la toma de decisiones basada en evidencia.

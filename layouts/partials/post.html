@@ -1,19 +1,20 @@
 <section class="container">
   <article class="blogpost">
     <header>
+      {{ $months := dict "Jan" "Ene" "Feb" "Feb" "Mar" "Mar" "Apr" "Abr" "May" "May" "Jun" "Jun" "Jul" "Jul" "Aug" "Ago" "Sep" "Sep" "Oct" "Oct" "Nov" "Nov" "Dec" "Dic" }}
       <h1 class="title">{{ .Title }}</h1>
-      <h2 class="date">{{ .Date.Format "January 2, 2006" }}</h2>
+      <h2 class="date">{{ .Date.Format "2" }} de {{ index $months (.Date.Format "Jan") }} de {{ .Date.Format "2006" }}</h2>
       <p style="margin-bottom: 0">
-        <b>Reading time</b>:
+        <b>Tiempo de lectura</b>:
         {{ if eq .ReadingTime 1 }}
-          1 minute
+          1 minuto
         {{ else }}
-          {{ .ReadingTime }} minutes
+          {{ .ReadingTime }} minutos
         {{ end }}
       </p>
       <p style="margin-bottom: 0; margin-top: 0;">
         {{ with .GetTerms "categories" }}
-          <b>Categories:</b>
+          <b>Categorías:</b>
           {{ $categories := slice }}
           {{ range . }}
             {{ $categories = $categories | append (printf `<a href="%s">%s</a>` .RelPermalink .LinkTitle) }}
@@ -23,7 +24,7 @@
       </p>
       <p style="margin-top: 0">
         {{ with .GetTerms "tags" }}
-          <b>Tags:</b>
+          <b>Etiquetas:</b>
           {{ $tags := slice }}
           {{ range . }}
             {{ $tags = $tags | append (printf `<a href="%s">%s</a>` .RelPermalink .LinkTitle) }}
@@ -41,17 +42,17 @@
 
     <p style="text-align: center;">
       <i>
-        Thoughts or questions about this article?
+        ¿Preguntas o comentarios sobre este artículo?
         <br />
-        Feel free to drop me a
-        <a href="https://www.linkedin.com/in/josetoral/" target="_blank">message on LinkedIn</a>
-        or reach out via the
-        <a href="/contact">contact page</a>.
+        Puedes enviarme un
+        <a href="https://www.linkedin.com/in/josetoral/" target="_blank">mensaje en LinkedIn</a>
+        o encontrarme en la
+        <a href="/contact">página de contacto</a>.
 
         <br />
         <br />
 
-        If you like my articles, please consider subscribing to my <a href="/blog/index.xml" target="_blank">RSS feed</a>.
+        Si te gustan mis artículos, considera suscribirte a mi <a href="/blog/index.xml" target="_blank">feed RSS</a>.
       </i>
     </p>
 

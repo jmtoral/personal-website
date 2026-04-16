@@ -1,6 +1,6 @@
 baseurl = "https://manueltoral.com"
 title = "Manuel Toral"
-languageCode = "en"
+languageCode = "es"
 timeZone = "America/Mexico_City"
 
 canonifyurls = true # Enable to turn relative URLs into absolute.
@@ -24,34 +24,26 @@ unsafe = true
 
 [params]
     author = "Manuel Toral"
-    info   = "AI/ML R&D · Data Science · Public Policy"
-    description = "Manuel Toral — Founding R&D Manager at Coca-Cola FEMSA, Data Scientist, and Lecturer. Building AI/ML institutional capabilities at scale."
+    info   = "Gerente de Proyectos de Ciencia de Datos y MLOps"
+    description = "Manuel Toral — Líder en Gestión de Proyectos de Ciencia de Datos y MLOps con más de 10 años de experiencia."
     keywords    = "manuel toral, data science, AI/ML, machine learning, public policy, MLOps, R, data visualization"
 
 [[params.social]]
-    name = "Email"
-    weight = 1
-    url = "/contact"
-[[params.social]]
     name = "GitHub"
-    weight = 2
+    weight = 1
     url = "https://github.com/jmtoral"
 [[params.social]]
     name = "LinkedIn"
-    weight = 3
+    weight = 2
     url = "https://www.linkedin.com/in/josetoral/"
-[[params.social]]
-    name = "RStudio"
-    weight = 4
-    url = "https://rstudio.com"
 
 # Menu links
 [[menu.main]]
-    name = "About"
+    name = "Acerca de"
     weight = 1
     url  = "/about/"
 [[menu.main]]
-    name = "Experience"
+    name = "Experiencia"
     weight = 2
     url = "/experience/"
 [[menu.main]]
@@ -59,6 +51,6 @@ unsafe = true
     weight = 3
     url = "/blog/"
 [[menu.main]]
-    name = "Contact"
+    name = "Contacto"
     weight = 4
     url = "/contact/"

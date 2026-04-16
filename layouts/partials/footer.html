@@ -1,6 +1,5 @@
 <style>
   .footer {
-    line-height: 4rem;
     width: 100%;
     text-align: center;
     line-height: 1.8em;
@@ -9,19 +8,36 @@
   }
   .ai-disclaimer {
     text-align: center;
-    margin-bottom: 0;
+    margin-bottom: 0.4rem;
+    font-size: 1.3rem;
+    color: #787570;
   }
+  body.dark-mode .ai-disclaimer { color: #7a8090; }
   .site-disclaimer {
     font-size: 11px;
-    line-height: 1.4;
-    margin: 0 0 1rem;
+    line-height: 1.6;
+    margin: 0 0 0.6rem;
+  }
+  .footer-icon {
+    width: 14px;
+    height: 14px;
+    vertical-align: middle;
+    margin-right: 3px;
+    opacity: 0.6;
+  }
+  .footer-social a {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
   }
 </style>
+
 <footer class="footer">
   <section class="container">
+
     <p class="ai-disclaimer">
-      <i>All content on this website is handwritten.<br />
-      This website does not contain AI-generated content.</i>
+      <img src="https://cdn-icons-png.flaticon.com/512/8637/8637101.png" class="footer-icon" alt="AI" />
+      Uso IA de forma responsable: como asistente, no como reemplazo de mi criterio.
     </p>
 
     <br style="line-height: 0;" />
@@ -33,20 +49,25 @@
 
     <br style="line-height: 8px;" />
 
-    <p class="site-disclaimer">
+    <p class="site-disclaimer footer-social">
       {{ with .Site.Params.social }}
         {{ $len := sub (len .) 1 }}
         {{ range $i, $e := sort . }}
-          <a href="{{ $e.url }}" target="_blank">{{ $e.name }}</a>{{ if lt $i $len }}&nbsp;|{{ end }}
+          <a href="{{ $e.url }}" target="_blank">{{ $e.name }}</a>{{ if lt $i $len }}&nbsp;·&nbsp;{{ end }}
         {{ end }}
       {{ end }}
     </p>
+
     <p class="site-disclaimer">
-      Built with <a href="https://gohugo.io" target="_blank">Hugo</a> &mdash; minimal, content-first, no trackers, no ads.
+      Tema basado en <a href="https://github.com/lucianonooijen/Personal-Website" target="_blank">Personal-Website</a> de <a href="https://lucianonooijen.com" target="_blank">Luciano Nooijen</a>
+      &mdash;
+      Construido con <a href="https://gohugo.io" target="_blank">Hugo</a>
     </p>
+
     <p class="site-disclaimer">
-      Theme based on <a href="https://github.com/lucianonooijen/Personal-Website" target="_blank">Personal-Website</a> by <a href="https://lucianonooijen.com" target="_blank">Luciano Nooijen</a> &mdash; Mexico City &middot; He/Him
+      Ciudad de México &middot; Él / Him
     </p>
+
   </section>
 </footer>
 

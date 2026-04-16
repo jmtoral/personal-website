@@ -1,12 +1,12 @@
 +++
-title = "Contact"
+title = "Contacto"
 slug = "contact"
 +++
 
-The best way to reach me is through [LinkedIn](https://www.linkedin.com/in/josetoral/) — feel free to connect or send me a message there.
+La mejor forma de contactarme es a través de [LinkedIn](https://www.linkedin.com/in/josetoral/) — no dudes en conectar o enviarme un mensaje por ahí.
 
-You can also find me on [GitHub](https://github.com/jmtoral).
+También puedes encontrar mi trabajo de código abierto en [GitHub](https://github.com/jmtoral).
 
-## Schedule a call
+## Agendar una llamada
 
-If you'd like to schedule a call or discuss a collaboration, reach out via LinkedIn and we can find a time that works.
+Si te gustaría agendar una llamada o discutir una colaboración, contáctame a través de LinkedIn y encontraremos un horario que funcione para ambos.

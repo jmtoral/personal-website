@@ -1,21 +1,15 @@
 +++
-title = "Experience"
+title = "Experiencia"
 slug = "experience"
 +++
 
-With over a decade navigating the intersection of data, technology, and public policy, I have worked in roles that demanded both technical depth and strategic clarity — from political analysis and public administration to fraud detection systems and institutional AI/ML capability building.
-
-I have led teams, built organizations, and designed frameworks from scratch. Whether as a data scientist, a policy analyst, or a founding manager, my focus is always the same: turn rigorous analysis into decisions that matter.
+Líder en Gestión de Proyectos de Ciencia de Datos y MLOps con más de 10 años de experiencia asegurando el ciclo de vida completo de productos analíticos (end-to-end). Experto en coordinar equipos multidisciplinarios bajo metodologías ágiles para garantizar la calidad, escalabilidad y entrega oportuna de soluciones de IA en los sectores Fintech, Retail y Público.
 
 {{< mdfile file="assets/blocks/technologies.md" >}}
 
----
 
-{{< mdfile file="assets/blocks/workmethod.md" >}}
 
----
-
-## Positions
+## Experiencia Profesional
 
 <div class="block-experience">
 {{< mdfile file="assets/blocks/experience.md" >}}

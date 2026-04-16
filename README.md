@@ -1,38 +1,61 @@
-# Luciano Nooijen personal website
+# Manuel Toral — Personal Website
 
-[![License: AGPL v3](https://img.shields.io/badge/License-AGPL%20v3-blue.svg)](https://www.gnu.org/licenses/agpl-3.0)
+Sitio personal de **Manuel Toral** — AI/ML R&D Manager, Data Scientist y académico. Construido con [Hugo](https://gohugo.io) y desplegado en [Vercel](https://vercel.com).
 
-Luciano Nooijen's personal website built with [Hugo](https://gohugo.io).
+🌐 **[manueltoral.com](https://manueltoral.com)**
 
-## Development
+---
 
-Run `npm install` to install development dependencies.
+## Sobre el sitio
 
-For development, run `hugo server`. The development environment is now accessable on `localhost:1313`.
+Este sitio es un espacio personal donde comparto:
 
-You can also just use `open http://localhost:1313 && hugo server`, but not all systems support this.
+- **Blog** — proyectos de análisis de datos, ciencia de datos aplicada y reflexiones sobre IA.
+- **About** — quién soy y qué hago.
+- **Experience** — trayectoria profesional y académica.
+- **Contact** — cómo encontrarme.
 
-## Production
+---
 
-As Hugo is a static website builder, you can just host the website on any hosting service. To build the static files, run `rm -rf build && hugo -d build -b [url]`. I run `hugo -d build -b https://lucianonooijen.com`.
+## Stack técnico
 
-Now upload the contents of the `build` folder to the webhost and you're done.
+| Tecnología | Uso |
+|---|---|
+| [Hugo](https://gohugo.io) | Generador de sitio estático |
+| [Vercel](https://vercel.com) | Hosting y despliegue continuo |
+| Sass / SCSS | Estilos |
+| Google Translate API | Traducción ES ↔ EN |
+| Flaticons | Iconografía |
 
-When using `make build` it also builds the css and runs the formatter before building.
+---
 
-## Make
+## Créditos
 
-The `make` command can also be used:
+Este sitio está basado en el tema **[Personal-Website](https://github.com/lucianonooijen/Personal-Website)** creado por [Luciano Nooijen](https://lucianonooijen.com), distribuido bajo licencia MIT. El diseño original fue adaptado extensamente para reflejar la identidad visual y el contenido propios.
 
-| Command       | Functionality                                                      |
-| ------------- | ------------------------------------------------------------------ |
-| `make server` | Runs hugo server                                                   |
-| `make css`    | Converts scss to css                                               |
-| `make dev`    | Runs hugo server and opens `localhost:1313` in browser             |
-| `make build`  | Runs hugo build command as explained under the "production" header |
-| `make fmt`    | Runs Prettier formatting for all files (should be in PATH)         |
+Partes del proceso de personalización fueron asistidas por herramientas de IA (Google DeepMind / Antigravity). El contenido editorial es íntegramente del autor.
 
-### License
+---
 
-- [AGPL3.0](https://www.gnu.org/licenses/agpl-3.0) for all website code
-- [CC-BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/) for text content
+## Desarrollo local
+
+Requiere [Hugo Extended](https://gohugo.io/installation/) y [Node.js](https://nodejs.org/).
+
+```bash
+# Instalar dependencias de Node
+npm install
+
+# Compilar CSS
+npm run build:css
+
+# Servidor de desarrollo
+hugo server
+```
+
+El sitio estará disponible en `http://localhost:1313`.
+
+---
+
+## Licencia
+
+El código del tema base es MIT (Luciano Nooijen). El contenido del blog y los textos son © Manuel Toral — todos los derechos reservados sobre el contenido original.

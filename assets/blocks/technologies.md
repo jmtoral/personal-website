@@ -1,38 +1,23 @@
-## Technologies & Tools
+## Habilidades Técnicas
 
-The tools I work with most and know deepest are in **bold**.
+### Datos y Programación
+- **Python** (PyTorch, Pandas, Scikit-learn, NumPy)
+- **R** (Tidyverse, Tidymodels, ggplot2)
+- **SQL** (Snowflake, DuckDB)
+- **SAS** (Base y Visual Analytics)
 
-### Data Science & Machine Learning
+### Ingeniería de GenAI y LLM
+- Generación Aumentada por Recuperación (RAG)
+- Bases de Datos Vectoriales
+- LangChain, OpenAI API, Prompt Engineering
 
-- **R** (tidyverse, ggplot2, tidymodels, Shiny, text mining)
-- **Python** (pandas, scikit-learn, transformers, LangChain)
-- **MLflow** — model registry, experiment tracking, governance
-- SQL (PostgreSQL, BigQuery, Databricks)
-- Network analysis (igraph, NetworkX)
-- NLP & text mining (zero-shot classification, LLMs, embeddings)
+### Nube y MLOps
+- AWS (Enfoque en SageMaker)
+- Pipelines de despliegue de modelos
+- Streamlit, Docker
+- Flujos de trabajo de datos en la nube
 
-### AI/ML Operations
-
-- **MLOps lifecycle** — PoC discovery, model documentation, handoff protocols
-- Model Cards, SIPOC, technical closure criteria
-- AI governance frameworks & Center of Excellence (CoE) design
-- Agentic architecture design
-
-### Data Visualization
-
-- **ggplot2** — primary visualization tool
-- Shiny — interactive dashboards
-- Tableau, PowerBI (for stakeholder reporting)
-
-### Cloud & Infrastructure
-
-- Azure (Azure ML, Databricks)
-- GCP (BigQuery, Vertex AI)
-- Git, GitHub Actions — version control and CI
-
-### Domain Expertise
-
-- Geospatial analysis — block-level geographic data, KYC applications
-- Social network analysis — political actors, activist networks
-- Fraud detection — transaction fraud, chargeback prediction
-- Public policy analytics — policy design, evidence-based decisions
+### Visualización y Geoespacial
+- Tableau, Power BI
+- QGIS, ArcGIS, GeoDa
+- Gephi, Quarto / Markdown / Blogging
