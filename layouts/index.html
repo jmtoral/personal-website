@@ -1,0 +1,197 @@
+{{ define "content" }}
+  <style>
+    /* ── Hero ── */
+    .home {
+      text-align: center;
+      padding: 4rem 0 5rem;
+    }
+
+    /* ── Avatar ── */
+    .home-avatar-wrap {
+      display: inline-block;
+      margin-bottom: 3rem;
+    }
+    .home-avatar {
+      width: 264px;
+      height: 264px;
+      border-radius: 16px;
+      object-fit: cover;
+      object-position: center 12%;
+      box-shadow: 0 8px 32px rgba(30, 40, 60, 0.13);
+      display: block;
+      transition: box-shadow 0.35s ease, transform 0.35s ease;
+    }
+    .home-avatar:hover {
+      box-shadow: 0 14px 44px rgba(30, 40, 60, 0.20);
+      transform: translateY(-3px);
+    }
+
+    .home h1 {
+      font-size: 3.2rem;
+      font-weight: 700;
+      color: #0F0F0D;
+      margin-bottom: 0.6rem;
+      letter-spacing: -0.015em;
+    }
+    .home-tagline {
+      font-size: 1.6rem;
+      color: #787570;
+      margin-top: 0;
+      margin-bottom: 0.5rem;
+      letter-spacing: 0.04em;
+    }
+    .home-pronouns {
+      font-size: 1.1rem;
+      color: #B0ADA5;
+      margin-top: 0;
+      margin-bottom: 3.4rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+    }
+
+    /* ── Social links ── */
+    .home ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+    .home li {
+      display: inline-flex;
+      align-items: center;
+    }
+    .home li + li::before {
+      content: "·";
+      margin: 0 0.8rem;
+      color: #D8D4CA;
+    }
+    .home li a {
+      margin: 0;
+      font-weight: 600;
+      font-size: 1.5rem;
+    }
+
+    /* ── Section separators on home ── */
+    .home-section {
+      border-top: 1px solid #D8D4CA;
+      padding: 3.2rem 0 2.4rem;
+    }
+    .home-section-label {
+      display: block;
+      font-size: 1.1rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: #B0ADA5;
+      font-weight: 600;
+      margin-bottom: 2rem;
+    }
+    .home-section-title {
+      font-size: 1.6rem;
+      font-weight: 700;
+      color: #0F0F0D;
+      margin-bottom: 0.6rem;
+    }
+    .home-section a {
+      text-decoration: none;
+    }
+    .home-section a:hover .home-section-title {
+      text-decoration: underline;
+      text-decoration-color: #2D5A2D;
+    }
+    .home-posts-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      text-align: left;
+    }
+    .home-post-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: 2rem;
+      padding: 0.9rem 0;
+      border-bottom: 1px solid #EDEAE3;
+    }
+    .home-post-item:last-child {
+      border-bottom: none;
+    }
+    .home-post-title {
+      font-size: 1.6rem;
+      font-weight: 600;
+      color: #1A1A17;
+      flex: 1;
+      line-height: 1.4;
+    }
+    .home-post-title:hover {
+      color: #2D5A2D;
+    }
+    .home-post-date {
+      font-size: 1.2rem;
+      color: #B0ADA5;
+      white-space: nowrap;
+      flex-shrink: 0;
+    }
+    .home-see-all {
+      display: inline-block;
+      margin-top: 2rem;
+      font-size: 1.3rem;
+      font-weight: 600;
+      color: #2D5A2D;
+      text-decoration: none;
+      letter-spacing: 0.04em;
+    }
+    .home-see-all:hover {
+      text-decoration: underline;
+    }
+    .home-see-all::after {
+      content: " →";
+    }
+
+    footer .ai-disclaimer { display: none; }
+
+    @media screen and (max-width: 800px) {
+      .home-avatar { width: 192px; height: 192px; }
+      .home h1 { font-size: 2.4rem; }
+      .home-post-item { flex-direction: column; gap: 0.2rem; }
+    }
+  </style>
+
+  <section class="container">
+    {{/* ── Hero ── */}}
+    <div class="home">
+      <div class="home-avatar-wrap">
+        <img
+          class="home-avatar"
+          src="/img/profile.jpg"
+          alt="{{ .Site.Params.author }}"
+        />
+      </div>
+      <h1>{{ .Site.Params.author }}</h1>
+      <p class="home-tagline">{{ .Site.Params.info }}</p>
+      <p class="home-pronouns">He / Him</p>
+      {{ with .Site.Params.social }}
+        <ul>
+          {{ range sort . }}
+            <li><a href="{{ .url }}" target="_blank">{{ .name }}</a></li>
+          {{ end }}
+        </ul>
+      {{ end }}
+    </div>
+
+    {{/* ── Recent Blog Posts ── */}}
+    {{ $posts := where site.RegularPages "Type" "blog" }}
+    {{ if $posts }}
+      <div class="home-section">
+        <span class="home-section-label">Recent Writing</span>
+        <ul class="home-posts-list">
+          {{ range first 5 ($posts.ByDate.Reverse) }}
+            <li class="home-post-item">
+              <a class="home-post-title" href="{{ .Permalink }}">{{ .Title }}</a>
+              <span class="home-post-date">{{ .Date.Format "Jan 2006" }}</span>
+            </li>
+          {{ end }}
+        </ul>
+        <a class="home-see-all" href="/blog/">All posts</a>
+      </div>
+    {{ end }}
+  </section>
+{{ end }}

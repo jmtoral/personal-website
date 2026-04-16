@@ -1,0 +1,169 @@
+<style>
+  /* ── Dark mode toggle & language toggle ── */
+  .topnav-controls {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+  .nav-btn {
+    background: none;
+    border: 1px solid currentColor;
+    border-radius: 6px;
+    padding: 2px 10px;
+    font-size: 1.3rem;
+    font-family: inherit;
+    cursor: pointer;
+    color: inherit;
+    opacity: 0.7;
+    transition: opacity 0.2s;
+    line-height: 2rem;
+  }
+  .nav-btn:hover { opacity: 1; }
+
+  /* ── Dark mode vars ── */
+  body.dark-mode {
+    --bg: #1a1c20;
+    --surface: #23262d;
+    --border: #35383f;
+    --text: #d4d8e2;
+    --heading: #eef0f5;
+    --link: #6fbf73;
+    --link-active: #4caf50;
+    --muted: #7a8090;
+    background-color: var(--bg) !important;
+    color: var(--text) !important;
+  }
+  body.dark-mode a { color: var(--link) !important; }
+  body.dark-mode a:hover { color: var(--link-active) !important; }
+  body.dark-mode h1, body.dark-mode h2, body.dark-mode h3,
+  body.dark-mode h4, body.dark-mode h5, body.dark-mode h6 {
+    color: var(--heading) !important;
+  }
+  body.dark-mode .topnav {
+    background-color: var(--surface) !important;
+    border-color: var(--border) !important;
+  }
+  body.dark-mode .topnav-title,
+  body.dark-mode .topnav-link,
+  body.dark-mode .mobilemenu { color: var(--heading) !important; }
+  body.dark-mode .home-tagline { color: var(--muted) !important; }
+  body.dark-mode .home-pronouns { color: var(--muted) !important; }
+  body.dark-mode .home-section { border-color: var(--border) !important; }
+  body.dark-mode .home-post-item { border-color: var(--border) !important; }
+  body.dark-mode .home-section-label { color: var(--muted) !important; }
+  body.dark-mode .home-post-date { color: var(--muted) !important; }
+  body.dark-mode code { background-color: #2e3238 !important; color: #a8d8ea !important; }
+  body.dark-mode .topnav-list.navopen { background-color: var(--surface) !important; border-color: var(--border) !important; }
+
+  /* Google Translate widget hides the toolbar */
+  .goog-te-banner-frame { display: none !important; }
+  body { top: 0 !important; }
+  .skiptranslate { display: none !important; }
+  #google_translate_element { display: none; }
+</style>
+
+<script>
+  function toggleMenu() {
+    const x = document.getElementById("topnav-items");
+    if (x.className === "topnav-list") {
+      x.className += " navopen";
+    } else {
+      x.className = "topnav-list";
+    }
+  }
+
+  // ── Dark mode ──
+  (function() {
+    if (localStorage.getItem("darkMode") === "1") {
+      document.documentElement.classList.add("dark-mode-pending");
+    }
+  })();
+
+  function toggleDarkMode() {
+    const body = document.body;
+    body.classList.toggle("dark-mode");
+    const btn = document.getElementById("dark-mode-btn");
+    if (body.classList.contains("dark-mode")) {
+      localStorage.setItem("darkMode", "1");
+      btn.textContent = "☀️";
+      btn.setAttribute("title", "Switch to light mode");
+    } else {
+      localStorage.setItem("darkMode", "0");
+      btn.textContent = "🌙";
+      btn.setAttribute("title", "Switch to dark mode");
+    }
+  }
+
+  document.addEventListener("DOMContentLoaded", function() {
+    if (localStorage.getItem("darkMode") === "1") {
+      document.body.classList.add("dark-mode");
+      const btn = document.getElementById("dark-mode-btn");
+      if (btn) { btn.textContent = "☀️"; }
+    }
+  });
+
+  // ── Language toggle (ES ↔ EN via Google Translate) ──
+  function googleTranslateElementInit() {
+    new google.translate.TranslateElement({
+      pageLanguage: 'en',
+      includedLanguages: 'es,en',
+      autoDisplay: false
+    }, 'google_translate_element');
+  }
+
+  function toggleLanguage() {
+    const btn = document.getElementById("lang-btn");
+    const selectEl = document.querySelector(".goog-te-combo");
+    if (!selectEl) {
+      // Widget not loaded yet — load script first
+      const s = document.createElement("script");
+      s.src = "//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit";
+      document.head.appendChild(s);
+      setTimeout(() => {
+        const sel = document.querySelector(".goog-te-combo");
+        if (sel) applyTranslation(sel, btn);
+      }, 1500);
+    } else {
+      applyTranslation(selectEl, btn);
+    }
+  }
+
+  function applyTranslation(selectEl, btn) {
+    if (selectEl.value === "es") {
+      selectEl.value = "en";
+      btn.textContent = "ES";
+      btn.setAttribute("title", "Translate to Spanish");
+    } else {
+      selectEl.value = "es";
+      btn.textContent = "EN";
+      btn.setAttribute("title", "Translate to English");
+    }
+    selectEl.dispatchEvent(new Event("change"));
+  }
+</script>
+
+<!-- Hidden Google Translate container -->
+<div id="google_translate_element"></div>
+
+<section class="container">
+  <nav class="topnav">
+    <a class="topnav-title" href="{{ .Site.BaseURL }}">
+      {{ .Site.Title }}
+    </a>
+    {{ with .Site.Menus.main }}
+      <a href="javascript:void(0);" class="mobilemenu" onclick="toggleMenu()">Menu</a>
+      <ul id="topnav-items" class="topnav-list">
+        {{ range sort . }}
+          <li class="topnav-item">
+            <a class="topnav-link" href="{{ .URL }}">{{ .Name }}</a>
+          </li>
+        {{ end }}
+      </ul>
+    {{ end }}
+
+    <div class="topnav-controls">
+      <button id="lang-btn" class="nav-btn" onclick="toggleLanguage()" title="Translate to Spanish">ES</button>
+      <button id="dark-mode-btn" class="nav-btn" onclick="toggleDarkMode()" title="Switch to dark mode">🌙</button>
+    </div>
+  </nav>
+</section>

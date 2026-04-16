@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Manuel Toral — Preview</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Mono:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { font-size: 62.5%; }
+    body {
+      font-family: 'Noto Sans Mono', monospace;
+      font-size: 2.0rem;  /* bumped up */
+      font-weight: 400;
+      letter-spacing: 0.028em;
+      line-height: 1.9em;
+      color: #1A1A17;
+      background-color: #EDEAE3;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    :root {
+      --bg:      #EDEAE3;
+      --surface: #F7F7F4;
+      --border:  #D8D4CA;
+      --text:    #1A1A17;
+      --heading: #0F0F0D;
+      --link:    #2D5A2D;
+      --link-hov:#1F4020;
+      --muted:   #787570;
+      --light:   #B0ADA5;
+    }
+
+    /* ── Nav ── */
+    .nav-wrap {
+      position: sticky; top: 0; z-index: 100;
+      background-color: var(--surface);
+      border-bottom: 1px solid var(--border);
+    }
+    nav {
+      max-width: 120rem; margin: 0 auto; padding: 0 3.2rem;
+      height: 64px; display: flex;
+      justify-content: space-between; align-items: center;
+    }
+    .nav-title { font-weight: 700; font-size: 1.8rem; color: var(--heading); text-decoration: none; }
+    .nav-links { list-style: none; display: flex; gap: 3rem; }
+    .nav-links a { color: var(--text); text-decoration: none; font-size: 1.6rem; font-weight: 500; transition: color 0.2s; }
+    .nav-links a:hover { color: var(--link); }
+
+    /* ── Content container ── */
+    .container { max-width: 120rem; margin: 0 auto; padding: 0 3.2rem; width: 100%; }
+
+    /* ── Hero ── */
+    .home { text-align: center; padding: 4.8rem 0 5rem; }
+    .home-avatar-wrap { display: inline-block; margin-bottom: 3rem; }
+    .home-avatar {
+      width: 220px; height: 220px; border-radius: 50%;
+      object-fit: cover; object-position: center 12%;
+      border: 3px solid var(--border);
+      box-shadow: 0 0 0 6px var(--bg), 0 0 0 8px var(--light), 0 16px 48px rgba(26,26,23,0.18);
+      display: block;
+      transition: box-shadow 0.35s ease, transform 0.35s ease;
+    }
+    .home-avatar:hover {
+      box-shadow: 0 0 0 6px var(--bg), 0 0 0 9px var(--muted), 0 20px 56px rgba(26,26,23,0.22);
+      transform: translateY(-3px);
+    }
+    .home h1 {
+      font-size: 3.6rem; font-weight: 700; color: var(--heading);
+      margin-bottom: 0.6rem; letter-spacing: -0.015em;
+    }
+    .home-tagline { font-size: 1.7rem; color: var(--muted); margin-bottom: 0.5rem; letter-spacing: 0.04em; }
+    .home-pronouns {
+      font-size: 1.15rem; color: var(--light); margin-bottom: 3.4rem;
+      letter-spacing: 0.14em; text-transform: uppercase;
+    }
+    .home ul { list-style: none; padding: 0; }
+    .home li { display: inline-flex; align-items: center; }
+    .home li + li::before { content: "·"; margin: 0 0.9rem; color: var(--border); font-size: 2rem; }
+    .home li a { margin: 0; font-weight: 600; font-size: 1.6rem; color: var(--link); text-decoration: none; transition: color 0.2s; }
+    .home li a:hover { color: var(--link-hov); text-decoration: underline; }
+
+    /* ── Home sections / separators ── */
+    .home-section {
+      border-top: 1px solid var(--border);
+      padding: 3.6rem 0 2.8rem;
+    }
+    .home-section-label {
+      display: block;
+      font-size: 1.15rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--light);
+      font-weight: 600;
+      margin-bottom: 2.2rem;
+    }
+    .home-posts-list { list-style: none; padding: 0; }
+    .home-post-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: 2rem;
+      padding: 1rem 0;
+      border-bottom: 1px solid #EDEAE3;
+    }
+    .home-post-item:last-child { border-bottom: none; }
+    .home-post-title {
+      font-size: 1.7rem; font-weight: 600; color: var(--text);
+      text-decoration: none; flex: 1; line-height: 1.4;
+      transition: color 0.2s;
+    }
+    .home-post-title:hover { color: var(--link); }
+    .home-post-date { font-size: 1.3rem; color: var(--light); white-space: nowrap; flex-shrink: 0; }
+    .home-see-all {
+      display: inline-block; margin-top: 2rem;
+      font-size: 1.4rem; font-weight: 600;
+      color: var(--link); text-decoration: none; letter-spacing: 0.04em;
+    }
+    .home-see-all:hover { text-decoration: underline; }
+    .home-see-all::after { content: " →"; }
+
+    /* ── Footer ── */
+    footer {
+      background-color: var(--surface); border-top: 1px solid var(--border);
+      text-align: center; padding: 2.8rem 2rem;
+      font-size: 1.35rem; color: var(--muted); line-height: 2;
+    }
+    footer a { color: var(--link); text-decoration: none; }
+    footer a:hover { text-decoration: underline; }
+
+    /* ── Palette strip ── */
+    .palette-strip { display: flex; height: 6px; }
+    .palette-strip span { flex: 1; }
+
+    @media screen and (max-width: 800px) {
+      body { font-size: 1.6rem; }
+      .home-avatar { width: 160px; height: 160px; }
+      .home h1 { font-size: 2.8rem; }
+      .home-post-item { flex-direction: column; gap: 0.2rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="nav-wrap">
+    <nav>
+      <a class="nav-title" href="#">Manuel Toral</a>
+      <ul class="nav-links">
+        <li><a href="#">About</a></li>
+        <li><a href="#">Experience</a></li>
+        <li><a href="#">Blog</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+
+  <div class="container">
+    <!-- HERO -->
+    <div class="home">
+      <div class="home-avatar-wrap">
+        <img class="home-avatar"
+             src="Gemini_Generated_Image_du9yhodu9yhodu9y.png"
+             alt="Manuel Toral" />
+      </div>
+      <h1>Manuel Toral</h1>
+      <p class="home-tagline">AI/ML R&amp;D &middot; Data Science &middot; Public Policy</p>
+      <p class="home-pronouns">He / Him</p>
+      <ul>
+        <li><a href="mailto:contact@manueltoral.com">Email</a></li>
+        <li><a href="https://github.com/jmtoral" target="_blank">GitHub</a></li>
+        <li><a href="https://www.linkedin.com/in/josetoral/" target="_blank">LinkedIn</a></li>
+        <li><a href="https://rstudio.com" target="_blank">RStudio</a></li>
+      </ul>
+    </div>
+
+    <!-- RECENT WRITING -->
+    <div class="home-section">
+      <span class="home-section-label">Recent Writing</span>
+      <ul class="home-posts-list">
+        <li class="home-post-item">
+          <a class="home-post-title" href="#">Hello, world!</a>
+          <span class="home-post-date">Jul 2020</span>
+        </li>
+        <li class="home-post-item">
+          <a class="home-post-title" href="#">Lasting corona effects on development teams</a>
+          <span class="home-post-date">Jan 2021</span>
+        </li>
+        <li class="home-post-item">
+          <a class="home-post-title" href="#">JSON checks at runtime with TypeScript</a>
+          <span class="home-post-date">Oct 2021</span>
+        </li>
+        <li class="home-post-item">
+          <a class="home-post-title" href="#">The best translation of Meditations by Marcus Aurelius</a>
+          <span class="home-post-date">Jun 2023</span>
+        </li>
+        <li class="home-post-item">
+          <a class="home-post-title" href="#">AI code editors: a critical evaluation</a>
+          <span class="home-post-date">Mar 2025</span>
+        </li>
+      </ul>
+      <a class="home-see-all" href="#">All posts</a>
+    </div>
+  </div>
+
+  <footer>
+    <p>&copy; <script>document.write(new Date().getFullYear())</script> <strong>Manuel Toral</strong></p>
+    <p>Built with Hugo &mdash; minimal, content-first, no trackers, no ads.</p>
+    <p>Mexico City &middot; He/Him</p>
+  </footer>
+
+  <div class="palette-strip">
+    <span style="background:#0F0F0D"></span>
+    <span style="background:#1A1A17"></span>
+    <span style="background:#3D3D38"></span>
+    <span style="background:#787570"></span>
+    <span style="background:#B0ADA5"></span>
+    <span style="background:#D8D4CA"></span>
+    <span style="background:#EDEAE3"></span>
+    <span style="background:#F7F7F4"></span>
+    <span style="background:#2D5A2D"></span>
+    <span style="background:#8B7355"></span>
+  </div>
+</body>
+</html>
