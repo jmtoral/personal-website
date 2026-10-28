@@ -42,10 +42,11 @@ unsafe = true
     name = "Acerca de"
     weight = 1
     url  = "/about/"
-[[menu.main]]
-    name = "Experiencia"
-    weight = 2
-    url = "/experience/"
+# Temporarily hidden (restore tomorrow):
+# [[menu.main]]
+#     name = "Experiencia"
+#     weight = 2
+#     url = "/experience/"
 [[menu.main]]
     name = "Blog"
     weight = 3
